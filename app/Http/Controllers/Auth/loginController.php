@@ -5,16 +5,16 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 
 
-use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\logRequest;
 use Illuminate\Support\Facades\Auth;
 
 class loginController extends Controller
 {
-    public function login(LoginRequest $request)
+    public function login(logRequest $request)
     {
 
         if (!Auth::attempt($request->all()))
-            return Response(['messige' => 'اطلاعات مشکل دارد']);
+            return Response(['messige' => 'اطلاعات مشکل دارد'],422);
 
 //        dd( Auth::createToken('MyApp')->accessToken);
         $user=Auth::user();
