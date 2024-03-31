@@ -1,0 +1,15 @@
+for regester
+url : domin.com/api/v1/register 
+key in form-data name email password 
+if stattos 422 error 
+if statos 200 or 201 ok!
+
+
+for login
+url : domin.com/api/v1/login 
+key in form-data  email password 
+if stattos 422 error 
+if statos 200 or 201 ok!
+
+
+token!!!!!
